@@ -1,7 +1,5 @@
 ## Currency RESTful Service
 
----
-
 ### Инструкция по запуску
 
 Для запуска сервиса вам потребуется предуставленный Docker.
@@ -24,6 +22,9 @@
 Примечение: Для изменения базового курса валюты требуется аккаунт с платным планом
 в сервисе [OpenExchangeRates](https://openexchangerates.org/). В ином случае можно использовать 'USD' по умолчанию.
   
+- Команда для завершения работы сервиса: 
+  `docker stop gif-app`
+
 ### Http endpoints
 Базовый API путь: `http://localhost:8080/`
 
@@ -32,10 +33,10 @@
 `GET http://localhost:8080/gif`
 
 Параметры запроса:
-`symbol` : string (_Required_) - Код валюты в трехбуквенном формате (Примеры: 'USD', 'RUB', 'EUR' и т.д.)
+`symbol` : string (_Required_) - Код валюты в трехбуквенном формате (Примеры: 'USD', 'RUB', 'EUR' и т.д.).
 
 
-Примеры:
+Примеры запросов:
 
 - `http://localhost:8080/gif?symbol=RUB`
   
