@@ -25,7 +25,7 @@ public class GifCurrencyServiceTest {
 
     private final String testSymbol = "RUB";
 
-    public void prepareReturnsForOpenExchangeRatesClient(float latestRate, float yesterdayRate) {
+    private void prepareReturnsForOpenExchangeRatesClient(float latestRate, float yesterdayRate) {
         var latestInfo = new CurrencyInfo(new HashMap<>() {{ put(testSymbol, latestRate); }}, 1609459200);
         var yesterdayInfo = new CurrencyInfo(new HashMap<>() {{ put(testSymbol, yesterdayRate); }}, 1609372800);
 
