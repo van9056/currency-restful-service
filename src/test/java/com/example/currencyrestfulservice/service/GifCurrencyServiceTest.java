@@ -4,7 +4,6 @@ import com.example.currencyrestfulservice.api.GiphyClient;
 import com.example.currencyrestfulservice.api.OpenExchangeRatesClient;
 import com.example.currencyrestfulservice.model.CurrencyInfo;
 import com.example.currencyrestfulservice.model.Gif;
-import com.example.currencyrestfulservice.service.GifCurrencyService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -55,7 +54,7 @@ public class GifCurrencyServiceTest {
     }
 
     @Test
-    public void whenYesterdayRateIsLessThanLatestRate_returnBrokeGif() {
+    public void whenYesterdayRateIsLessThanLatestRate_returnRichGif() {
         prepareReturnsForOpenExchangeRatesClient(75, 70);
         gifCurrencyService.getRelevantGif(testSymbol);
         verify(giphyClient).getRandomGif(any(), eq("rich"));
